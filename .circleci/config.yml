@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+    build: # this can be any name you choose
+        docker:
+            - image: circleci/node:12.18.3
+
+        steps:
+            - checkout
+
+            - run:
+                  command: npm install
+            - run:
+                  command: npm run prod
